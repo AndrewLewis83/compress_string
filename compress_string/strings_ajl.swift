@@ -13,6 +13,11 @@ class strings_ajl{
     
     // returns character of desired index
     func character(stringIndex: Int, stringInput: String)->Character{
+        
+        if(stringIndex > stringInput.count-1){
+            print("string index is out of range")
+            return "0"
+        }
     
         var chars = [Character]()
         
