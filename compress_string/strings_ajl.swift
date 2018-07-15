@@ -18,6 +18,10 @@ class strings_ajl{
             // modification for compress_string app
             //print("Index \(stringIndex) is out of range for string \(stringInput)")
             return "0"
+        }else if(stringIndex < 0){
+            // modification for compress_string app
+            //print("Index \(stringIndex) for string \(stringInput) must be a positive number")
+            return "0"
         }
     
         var chars = [Character]()
@@ -26,7 +30,7 @@ class strings_ajl{
             chars.append(stringInput[letters])
         }
         
-        let char = chars[stringIndex-1]
+        let char = chars[stringIndex]
         
         return char
     }

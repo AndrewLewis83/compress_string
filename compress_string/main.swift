@@ -9,7 +9,7 @@
 import Foundation
 
 print("""
-    This program will take a user provided string and compress it.
+This program will take a user provided string and compress it. aaabbcccc would be a3b2c4, for example.
 """)
 
 let CS = Compress_String()

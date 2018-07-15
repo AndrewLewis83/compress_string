@@ -25,25 +25,24 @@ class Compress_String {
     func compressString(userInput:String)->String{
         
         var compressedString = ""
-        var position = 2
         var count = 1
         
-        for letters in userInput.indices {
+        var char = myStringClass.character(stringIndex: 0, stringInput: userInput)
+        
+        for letters in 1...userInput.count {
             
-            if userInput[letters] == myStringClass.character(stringIndex: position, stringInput: userInput){
+            if myStringClass.character(stringIndex: letters, stringInput: userInput) == myStringClass.character(stringIndex: letters-1, stringInput: userInput){
                 count += 1
             }else if count > 1{
-                compressedString.append(userInput[letters])
+                compressedString.append(char)
                 compressedString.append("\(count)")
+                char = myStringClass.character(stringIndex: letters, stringInput: userInput)
                 count = 1
             }else{
-                compressedString.append(userInput[letters])
+                compressedString.append(char)
+                char = myStringClass.character(stringIndex: letters+1, stringInput: userInput)
                 count = 1
             }
-            
-            position += 1
-            
-            
         }
         
         return compressedString
