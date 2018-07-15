@@ -15,7 +15,8 @@ class strings_ajl{
     func character(stringIndex: Int, stringInput: String)->Character{
         
         if(stringIndex > stringInput.count-1){
-            print("string index is out of range")
+            // modification for compress_string app
+            //print("Index \(stringIndex) is out of range for string \(stringInput)")
             return "0"
         }
     
